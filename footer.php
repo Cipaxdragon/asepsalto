@@ -13,12 +13,18 @@
           </ul>
         </div>
         <div class="col-md-6">
-          <h4>Follow Us</h4>
+          <h4>Jangko Ikut i A</h4>
+          <style>
+          #medsos{
+            font-size: 2rem;
+          }
+          </style>
           <!-- Add your social media links here -->
-          <ul class="list-inline">
-            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
-            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          <ul id="medsos" class="list-inline">
+            <li class="list-inline-item"><a href="https://github.com/cipaxdragon" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank"><i class="fab fa-discord"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_self"><i class="fab fa-youtube"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/gznzcz/" target="_blank"><i class="fab fa-instagram"></i></a></li>
             <!-- Add more social media links as needed -->
           </ul>
         </div>

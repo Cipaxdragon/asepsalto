@@ -113,7 +113,7 @@ include_once "header.php";
     </ul>
   </div>
    <div class="container mt-5 border p-3 d-flex justify-content-center align-items-center flex-column">
-        <h3>Daftar Format Template Lengkap</h3>
+        <h3>Daftar Format Laporan </h3>
         <h5>Coming Soon</h5>
         </div>
 
@@ -124,10 +124,11 @@ include_once "header.php";
             <h2>Ini Website To</h2>
             <p>
                Untuk Belajar php native ku ji Sama untuk kebutuhan berbagi text langsung saat kuliah dan kumpul kumpulan software itu ji aowkaowk
+               masi dalam tahap perkembangan ji ini kodong
             </p>
      
          </div>
-       <div class="col-md-6 d-flex flex-column align-items-center">
+       <div class="col-md-6 mt-4">
     <h4>Berikan Kritik Dan Saran Tod</h4>
     
     <form action="" method="post" class="w-100">
