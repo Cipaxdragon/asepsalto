@@ -12,21 +12,6 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `asepsalto`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `kritik_saran`
---
-
 CREATE TABLE `kritik_saran` (
   `user` varchar(255) NOT NULL,
   `teks` longtext NOT NULL,
