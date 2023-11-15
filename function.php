@@ -49,6 +49,11 @@ function cari($keyword) {
 	$query = "SELECT * FROM sambarang WHERE teks LIKE '%$keyword%'";
 	return kueri($query);
 }
+function cari_kritik($keyword) {
+	$query = "SELECT * FROM `kritik_Saran` WHERE teks LIKE '%$keyword%'";
+	return kueri($query);
+}
+
 
 
 function waktu_konversi($a){
