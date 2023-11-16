@@ -66,7 +66,7 @@
     .hero-image {
         margin-top: 57px;
         /* height: 1014px; */
-        background-image: url('!.png');
+        background-image: url('!.jpg');
         background-size: cover;
         background-position: center;
         color: #ffffff;

@@ -3,6 +3,8 @@
 
   if(!isset($_COOKIE['user'])){
     setcookie("user", uniqid(), time() + (30 * 24 * 60 * 60));
+    header("Location: index.php");
+    exit;
   }
   include_once "function.php";
 
@@ -37,7 +39,7 @@ include_once "header.php";
 
 
       <div class="custom-form">
-        <?php if (janganspam()): ?>
+        <?php if (janganspam('sambarang')): ?>
         <!-- Form Input and Link -->
         <form method="post">
           <div class="form-group">
@@ -48,7 +50,9 @@ include_once "header.php";
             </div>
           </form>
           <?php else: ?>
-            <div class="alert alert-info" role="alert" id="countdown">Jangan Spam</div>
+            <div class="alert alert-info" role="alert" id="countdown_sambarang">Jangan Spam</div>
+            <?php include_once "countdown_sambarang.php" ?>
+
         <?php endif; ?>
         </div>
     </div>
@@ -104,12 +108,19 @@ include_once "header.php";
     <ul class="list-group">
       <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
         Adobe Photoshop CC
-        <a href="https://drive.google.com/file/d/1LJPtwIH_iqpKk6OsNln4kjma-s4kjR0f/view" target="_blank" class="btn btn-sm btn-primary">Download</a>
+        <a href="https://drive.google.com/file/d/1LJPtwIH_iqpKk6OsNln4kjma-s4kjR0f/view" target="_blank" class="btn btn-sm btn-primary">Donglod</a>
       </li>
+
       <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
         Corel Draw
-        <a href="https://drive.google.com/file/d/1YSw9ALCrxNkn_6Zl1A17dD9EKAj939an/view"  target="_blank" class="btn btn-sm btn-primary">Download</a>
-      
+        <a href="https://drive.google.com/file/d/1YSw9ALCrxNkn_6Zl1A17dD9EKAj939an/view"  target="_blank" class="btn btn-sm btn-primary">Donglod</a>
+        </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+        Garis Pinggir
+        <a href="https://bit.ly/gasping"  target="_blank" class="btn btn-sm btn-primary">Donglod</a>
+        </li>
+        
     </ul>
   </div>
    <div class="container mt-5 border p-3 d-flex justify-content-center align-items-center flex-column">
@@ -131,20 +142,24 @@ include_once "header.php";
        <div class="col-md-6 mt-4">
     <h4>Berikan Kritik Dan Saran Tod</h4>
     
-    <form action="" method="post" class="w-100">
+    
+    <?php if (janganspam('kritik_saran')): ?>
+      <form action="" method="post" class="w-100">
         <div class="form-group">
             <textarea class="form-control" id="kritik" name="kritik" rows="4" placeholder="Minta Saran ta fitur apa bagus dan Kritik ta siapa tau bagus klo ada juga bug mohon tulis hehe supaya bisa ku solve anjay "></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary">Kirim</button>
+      <?php else: ?>
+        <div class="alert alert-info" role="alert" id="countdown_kritik">Jangan Spam Cuy </div>
+        <?php include_once "countdown_kritik.php" ?>
+      <?php endif; ?>
+    
     </form>
 </div>
 
       </div>
    </div>
-
-  
-
   <br>
   <br>
   <br>

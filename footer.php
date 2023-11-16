@@ -45,23 +45,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
-// Set the countdown time in seconds
-var countdownTime = <?php echo selisihspam()?>;
 
-// Update the countdown every second
-var countdownElement = document.getElementById('countdown');
-var countdownInterval = setInterval(function() {
-    // Display the remaining time
-    countdownElement.innerHTML = 'Jangan Spam Cuy Tunggu dalam waktu ' + countdownTime + ' detik';
-
-    // Check if the countdown has reached zero
-    if (countdownTime <= 0) {
-        clearInterval(countdownInterval); // Stop the countdown
-        countdownElement.innerHTML = 'Nah Bisa Mako Input Refresh ki rong aokwoawk';
-    } else {
-        countdownTime--; // Decrement the countdown time
-    }
-}, 1000); // Update every 1000 milliseconds (1 second)
 </script>
 
 </body>

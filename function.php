@@ -1,9 +1,10 @@
 <?php 
+
 date_default_timezone_set('Asia/Makassar');
 
 // Now you can use date and time functions with the specified time zone
+// $conn = mysqli_connect("sql311.infinityfree.com", "if0_35432091", "tDCWcyZd6kU2", "if0_35432091_asepsalto");
 $conn = mysqli_connect("localhost", "root", "", "asepsalto");
-
 function kueri($query) {
 	global $conn;
 	$result = mysqli_query($conn, $query);
@@ -69,13 +70,13 @@ function waktu_konversi($a){
 }
 
 
-function janganspam(){
+function janganspam($tabel){
     // echo "<br>";
     if(!isset($_COOKIE['user'])){
         return true;
     }
     $user = $_COOKIE['user'];
-    $hasil=kueri("SELECT * FROM `sambarang` WHERE user = '$user' ORDER BY waktu DESC ");
+    $hasil=kueri("SELECT * FROM $tabel WHERE user = '$user' ORDER BY waktu DESC ");
     if(!$hasil){
         return true;
     }else{
@@ -101,6 +102,9 @@ function janganspam(){
     }
 }
 
+
+
+
 function selisihspam(){
     $user = $_COOKIE['user'];
     $hasil=kueri("SELECT * FROM `sambarang` WHERE user = '$user' ORDER BY waktu DESC ");
@@ -120,6 +124,29 @@ function selisihspam(){
     // Menampilkan hasil
     return "$anjay";
 }
+function selisihspamkritik(){
+    $user = $_COOKIE['user'];
+    $hasil=kueri("SELECT * FROM `kritik_saran` WHERE user = '$user' ORDER BY waktu DESC ");
+    // Waktu dari database (misalnya dari hasil query)
+    $targetDateTime = strtotime($hasil[0]['waktu']);
+    
+    // Waktu sekarang
+    $currentDateTime = time();
+    
+    // Menghitung selisih waktu
+    $timeDifference = $currentDateTime - $targetDateTime;
+    
+    // Konversi selisih waktu ke dalam format yang diinginkan (misalnya dalam detik, menit, jam, dll.)
+    $secondsDifference = $timeDifference % 60;
+    
+    $anjay = 60- $secondsDifference;
+    // Menampilkan hasil
+    return "$anjay";
+}
+
+
+
+
 function jumlahtabelsambarang(){
     global $conn;
     $sql = "SELECT COUNT(*) AS total FROM sambarang;";
