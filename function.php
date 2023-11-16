@@ -3,7 +3,8 @@
 date_default_timezone_set('Asia/Makassar');
 
 // Now you can use date and time functions with the specified time zone
-$conn = mysqli_connect("sql311.infinityfree.com", "if0_35432091", "tDCWcyZd6kU2", "if0_35432091_asepsalto");
+$conn = mysqli_connect("sql311.infinityfree.com", "if0_35432901", "IsDGPoLKbzt7y", "if0_35432901_asepsalto");
+// $conn = mysqli_connect("sql311.infinityfree.com", "if0_35432091", "tDCWcyZd6kU2", "if0_35432091_asepsalto");
 // $conn = mysqli_connect("localhost", "root", "", "asepsalto");
 function kueri($query) {
 	global $conn;
