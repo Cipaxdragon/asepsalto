@@ -32,9 +32,9 @@
       <hr class="my-4">
       <div class="row">
         <div class="col-md-6">
-          <p>&copy; 2023 Asepsalto. All rights reserved.</p>
-          <p>Designed by Cet gi pi ti</p>
-          <p>Backend By Ghazali</p>
+          <p>&copy; 2023 Asep. All rights reserved.</p>
+          <p>Desain Menggunakan Boostrap</p>
+          <p>Pakai Bahasa Pemrograman PHP ja kodong (Bahasa yang sering di bully) </p>
         </div>
       </div>
     </div>

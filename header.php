@@ -7,7 +7,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
+
     .small-text {
   font-size: 0.6em; /* Adjust the font size as needed */
 }
@@ -17,6 +19,7 @@
 }
 
     @media (max-width: 768px) {
+
   /* Other styles for mobile view */
 
   /* Reduce the size of the hamburger button/icon */

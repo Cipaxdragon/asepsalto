@@ -54,6 +54,28 @@
 <br>
 <br>
 <hr>
+
+<?php include_once "aplikasi.php"?>
+<div class="container mt-5">
+    <h2 class="list-heading d-flex justify-content-center">Daftar Aplikasi Andalan</h2>
+
+    <div class="row justify-content-center">
+        <?php foreach ($aplikasi_links as $aplikasi) : ?>
+            <div class="col-md-4 col-sm-6 mb-4 rounded">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <img src="<?php echo $aplikasi['icon']; ?>" class="img-fluid mb-3 p-3" alt="<?php echo $aplikasi['nama_aplikasi']; ?>">
+                        <h5 class="card-title"><?php echo $aplikasi['nama_aplikasi']; ?></h5>
+                        <p class="card-text"><?php echo $aplikasi['deskripsi']; ?></p>
+                        <a href="<?php echo $aplikasi['link']; ?>" class="btn btn-primary" target="_blank"><i class="fas fa-download"></i> Download</a>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+
+
 <!-- List Section -->
 <div id="list" class="container list-text">
    <h2 class="list-heading d-flex justify-content-center">Daftar Text ka</h2>
@@ -93,6 +115,7 @@
       <!-- ... -->
    </ul>
 </div>
+
 <!-- List Section -->
 <div id="aplikasi" class="container list-text ">
    <h2 class="list-heading d-flex justify-content-center">Daftar File Andalan</h2>

@@ -6,7 +6,7 @@
     var countdownElement = document.getElementById('countdown_sambarang');
     var countdownInterval = setInterval(function() {
         // Display the remaining time
-        countdownElement.innerHTML = 'Jangan Spam Cuy Tunggu dalam waktu ' + countdownTime + ' detik';
+        countdownElement.innerHTML = 'Jangan Spam Cuy Ballassi Server<br> Tunggu dalam waktu ' + countdownTime + ' detik';
         // Check if the countdown has reached zero
         if (countdownTime <= 0) {
             clearInterval(countdownInterval); // Stop the countdown
