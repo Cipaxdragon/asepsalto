@@ -3,8 +3,8 @@
 date_default_timezone_set('Asia/Makassar');
 
 // Now you can use date and time functions with the specified time zone
-// $conn = mysqli_connect("sql311.infinityfree.com", "if0_35432091", "tDCWcyZd6kU2", "if0_35432091_asepsalto");
-$conn = mysqli_connect("localhost", "root", "", "asepsalto");
+$conn = mysqli_connect("sql311.infinityfree.com", "if0_35432091", "tDCWcyZd6kU2", "if0_35432091_asepsalto");
+// $conn = mysqli_connect("localhost", "root", "", "asepsalto");
 function kueri($query) {
 	global $conn;
 	$result = mysqli_query($conn, $query);
@@ -30,6 +30,24 @@ function tambah($data) {
 
 	return mysqli_affected_rows($conn);
 }
+
+function aplikasi($data) {
+	global $conn;
+
+	$user = $_COOKIE["user"];
+	$teks = htmlspecialchars($data["teks"]);
+	$waktu = date("Y-m-d H:i:s");
+
+	$query = "INSERT INTO sambarang
+				VALUES
+			  ('$user', '$teks','$waktu');
+			";
+	mysqli_query($conn, $query);
+
+	return mysqli_affected_rows($conn);
+}
+
+
 function tambah_saran($data) {
 	global $conn;
 
