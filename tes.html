@@ -1,68 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Halaman Aplikasi</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Website Organisasi</title>
+  <!-- Tambahkan link CSS Bootstrap -->
+  <!-- Tambahkan link ke file CSS FullCalendar -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" integrity="sha256-Gn5381n9f/c9aPQDFFVSZLBhD9yVv9YBh8q5f8f49c=" crossorigin="anonymous" />
 
-    <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<!-- Tambahkan link ke file JavaScript FullCalendar -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js" integrity="sha256-HmpBzS0wC2ddRsFAeo81Cx1rs5PQI+0zllY8KoxE+5c=" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
+<body>
 
-<body class="bg-light">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Organisasi</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Beranda</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about">Tentang</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#articles">Artikel</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#members">Anggota</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#calendar">Kalender</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#social-media">Media Sosial</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-    <div class="container mt-5">
-        <div class="row justify-content-center">
+<!-- Hero Image -->
+<div class="jumbotron text-center">
+  <h1 class="display-4">Selamat Datang di Organisasi</h1>
+  <p class="lead">Deskripsi singkat mengenai organisasi Anda.</p>
+</div>
 
-            <!-- Card 1 -->
-            <div class="col-md-4 mb-4">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <i class="fas fa-apple fa-3x mb-3"></i>
-                        <h5 class="card-title">Nama Aplikasi 1</h5>
-                        <p class="card-text">Deskripsi Aplikasi 1.</p>
-                        <a href="#" class="btn btn-primary"><i class="fas fa-download"></i> Download</a>
-                    </div>
-                </div>
-            </div>
+<!-- Tentang -->
+<section id="about" class="container mt-4">
+  <h2>Tentang Kami</h2>
+  <p>Deskripsi mengenai organisasi, visi, dan misi.</p>
+</section>
 
-            <!-- Card 2 -->
-            <div class="col-md-4 mb-4">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <i class="fab fa-android fa-3x mb-3"></i>
-                        <h5 class="card-title">Nama Aplikasi 2</h5>
-                        <p class="card-text">Deskripsi Aplikasi 2.</p>
-                        <a href="#" class="btn btn-primary"><i class="fas fa-download"></i> Download</a>
-                    </div>
-                </div>
-            </div>
+<!-- Daftar Artikel -->
+<section id="articles" class="container mt-4">
+  <h2>Artikel</h2>
+  <ul>
+    <li><a href="#">Judul Artikel 1</a></li>
+    <li><a href="#">Judul Artikel 2</a></li>
+    <!-- Tambahkan lebih banyak artikel jika diperlukan -->
+  </ul>
+</section>
 
-            <!-- Card 3 -->
-            <div class="col-md-4 mb-4">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <i class="fab fa-windows fa-3x mb-3"></i>
-                        <h5 class="card-title">Nama Aplikasi 3</h5>
-                        <p class="card-text">Deskripsi Aplikasi 3.</p>
-                        <a href="#" class="btn btn-primary"><i class="fas fa-download"></i> Download</a>
-                    </div>
-                </div>
-            </div>
+<!-- Anggota Pengurus -->
+<section id="members" class="container mt-4">
+  <h2>Anggota Pengurus</h2>
+  <!-- Tambahkan informasi anggota pengurus -->
+</section>
 
-        </div>
-    </div>
+<!-- Kalender Kegiatan -->
+<section id="calendar" class="container mt-4">
+  <h2>Kalender Kegiatan</h2>
+  <!-- Tambahkan kalender kegiatan -->
+</section>
 
-    <!-- Font Awesome Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<!-- Media Sosial -->
+<section id="social-media" class="container mt-4">
+  <h2>Media Sosial</h2>
+  <!-- Tambahkan tautan media sosial -->
+</section>
 
-    <!-- Bootstrap JS and Popper.js -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+<!-- Tambahkan link JavaScript Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+      $('#fullCalendar').fullCalendar({
+        // Konfigurasi dan opsi lainnya
+        header: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'month,agendaWeek,agendaDay'
+        },
+        // Tambahkan acara ke dalam kalender
+        events: [
+          {
+            title: 'Nama Kegiatan 1',
+            start: '2023-11-01',
+            end: '2023-11-02'
+          },
+          {
+            title: 'Nama Kegiatan 2',
+            start: '2023-11-05',
+            end: '2023-11-07'
+          }
+          // Tambahkan acara lain jika diperlukan
+        ]
+      });
+    });
+  </script>
+  
 </body>
-
 </html>
-    

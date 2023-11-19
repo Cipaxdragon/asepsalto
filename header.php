@@ -211,6 +211,7 @@
 
   </style>
   <title>Asepsalto</title>
+  <meta name="description" content="Asepsalto web gabut belajar php native untuk kirim dan catat text online ">
 </head>
 <body>
 

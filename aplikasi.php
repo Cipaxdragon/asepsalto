@@ -42,6 +42,6 @@
             'link' => 'https://drive.google.com/file/d/1kBN4dQCylDzeRifTsLsuWr1N0TK0fsaL/view'
         ),
 
-        // Tambahkan lebih banyak aplikasi jika diperlukan
+        
     );
 ?>

@@ -3,9 +3,8 @@
 date_default_timezone_set('Asia/Makassar');
 
 // Now you can use date and time functions with the specified time zone
-// $conn = mysqli_connect("sql311.infinityfree.com", "if0_35432901", "IsDGPoLKbzt7y", "if0_35432901_asepsalto");
-// $conn = mysqli_connect("sql311.infinityfree.com", "if0_35432091", "tDCWcyZd6kU2", "if0_35432091_asepsalto");
-$conn = mysqli_connect("localhost", "root", "", "asepsalto");
+$conn = mysqli_connect("sql109.infinityfree.com", "if0_35433443", "XBNNx63Ko2KCI", "if0_35433443_dragon");
+// $conn = mysqli_connect("localhost", "root", "", "asepsalto");
 function kueri($query) {
 	global $conn;
 	$result = mysqli_query($conn, $query);
@@ -21,6 +20,7 @@ function tambah($data) {
 
 	$user = $_COOKIE["user"];
 	$teks = htmlspecialchars($data["teks"]);
+	$teks = nl2br($teks);
 	$waktu = date("Y-m-d H:i:s");
 
 	$query = "INSERT INTO sambarang
@@ -54,6 +54,7 @@ function tambah_saran($data) {
 
 	$user = $_COOKIE["user"];
 	$teks = htmlspecialchars($data["kritik"]);
+	$teks = nl2br($teks);
 	$waktu = date("Y-m-d H:i:s");
 
 	$query = "INSERT INTO kritik_saran
@@ -74,8 +75,6 @@ function cari_kritik($keyword) {
 	return kueri($query);
 }
 
-
-
 function waktu_konversi($a){
     $timestamp_from_database =  $a;
 
@@ -84,7 +83,6 @@ function waktu_konversi($a){
     
     // Tampilkan hasil
     
-
     return $new_format;
 }
 
@@ -111,7 +109,7 @@ function janganspam($tabel){
         $currentDateTime = time();
         
         // Periksa apakah sudah lewat 1 menit
-        if ($currentDateTime > ($targetDateTime + 60)) {
+        if ($currentDateTime > ($targetDateTime + 10)) {
             $lewat = true;
             return  $lewat;
         } else {
@@ -120,9 +118,6 @@ function janganspam($tabel){
         }
     }
 }
-
-
-
 
 function selisihspam(){
     $user = $_COOKIE['user'];
@@ -143,6 +138,7 @@ function selisihspam(){
     // Menampilkan hasil
     return "$anjay";
 }
+
 function selisihspamkritik(){
     $user = $_COOKIE['user'];
     $hasil=kueri("SELECT * FROM `kritik_saran` WHERE user = '$user' ORDER BY waktu DESC ");
@@ -158,13 +154,10 @@ function selisihspamkritik(){
     // Konversi selisih waktu ke dalam format yang diinginkan (misalnya dalam detik, menit, jam, dll.)
     $secondsDifference = $timeDifference % 60;
     
-    $anjay = 60- $secondsDifference;
+    $anjay = 60 - $secondsDifference;
     // Menampilkan hasil
     return "$anjay";
 }
-
-
-
 
 function jumlahtabelsambarang(){
     global $conn;
@@ -181,8 +174,6 @@ function jumlahtabelsambarang(){
 function dataperhalamansambrang($angka){
     return $angka;
 }
-
-
 
 function paginasisambgarang(){
     global $dataPerPage ;
@@ -221,7 +212,6 @@ function paginasisambgarang(){
     }
 
     echo '<li class="page-item ' . ($currentPage == $totalPages ? 'disabled' : '') . '"><a class="page-link" href="?page=' . ($currentPage + 1) . '#list">&gt;</a></li>';
-
 
 }
 

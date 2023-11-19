@@ -10,7 +10,7 @@
   $awal = $dataPagination['awalData'];
   $dataperhalaman = $dataPagination['jumlahDataPerHalaman'];
   $dataPerPage = $dataPagination['jumlahDataPerHalaman'];
-  $hasil=kueri("SELECT * FROM `kritik_Saran` ORDER BY waktu DESC ");
+  $hasil=kueri("SELECT * FROM `kritik_saran` ORDER BY waktu DESC ");
   if (isset($_POST['kritik'])) {
     tambah_saran($_POST);
     header("Location: index.php?#kritik");
