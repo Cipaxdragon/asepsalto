@@ -155,8 +155,13 @@
     /* Tambahkan media query untuk perangkat seluler */
 @media (max-width: 768px) {
   /* Pengaturan untuk perangkat seluler */
-
+  .app_gambar {
+    width: 10rem;
+  }
   /* Penyesuaian pada navigasi */
+  h2{
+    font-size: 1.5rem;
+  }
   .navbar {
     animation: none; /* Hilangkan animasi pada navigasi */
   }
@@ -236,6 +241,10 @@
         <li class="nav-item">
             <a class="nav-link" href="#kritik">Kritik</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#up_gambar">Gambar</a>
+        </li>
+        
           <!-- Add more navigation links as needed -->
         </ul>
       </div>

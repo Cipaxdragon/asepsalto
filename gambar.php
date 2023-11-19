@@ -62,9 +62,13 @@
         <div class="alert alert-success">Data  Berhasil Di tambahkan cok</div>
      <?php endif?>
       <?php foreach ($hasil as $row) :?>
-        <li class="list-group-item list-group-item-action">
+        <li class="list-group-item list-group-item-action d-flex align-items-center justify-content-between">
         <img width="100" src="upload/<?= $row["gambar"]?>" alt="">  
+        <div class="d-flex align-items-center justify-content-between " style="gap : 20px">
         <span class="float-right small-text text-muted"><?php echo $row["user"] . ' - ' . waktu_konversi($row["waktu"]); ?></span>
+          <a href="upload/<?= $row["gambar"]?>" target="_blank" class="btn btn-sm btn-primary">Donglod</a>
+          
+        </div>
       </li>
       <?php  endforeach?>
     </ul>

@@ -1,10 +1,7 @@
 <?php 
 
 date_default_timezone_set('Asia/Makassar');
-
-// Now you can use date and time functions with the specified time zone
-$conn = mysqli_connect("sql109.infinityfree.com", "if0_35433443", "XBNNx63Ko2KCI", "if0_35433443_dragon");
-// $conn = mysqli_connect("localhost", "root", "", "asepsalto");
+include_once "koneksi.php";
 function kueri($query) {
 	global $conn;
 	$result = mysqli_query($conn, $query);
@@ -80,13 +77,13 @@ function upload() {
 		return false;
 	}
 
-	// cek jika ukurannya terlalu besar
-	if( $ukuranFile > 1000000 ) {
-		echo "<script>
-				alert('ukuran gambar terlalu besar!');
-			  </script>";
-		return false;
-	}
+	// // cek jika ukurannya terlalu besar
+	// if( $ukuranFile > 1000000 ) {
+	// 	echo "<script>
+	// 			alert('ukuran gambar terlalu besar!');
+	// 		  </script>";
+	// 	return false;
+	// }
 
 	// lolos pengecekan, gambar siap diupload
 	// generate nama gambar baru
@@ -287,6 +284,52 @@ function paginasisambgarang(){
 
 
 
+function getFolderSize($folderPath) {
+    $totalSize = 0;
+
+    $files = scandir($folderPath);
+
+    foreach ($files as $file) {
+        // Periksa apakah itu file atau folder
+        $filePath = $folderPath . '/' . $file;
+
+        if (is_file($filePath)) {
+            // Jika itu file, tambahkan ukurannya ke totalSize
+            $totalSize += filesize($filePath);
+        } elseif ($file != '.' && $file != '..' && is_dir($filePath)) {
+            // Jika itu folder, rekursif panggil fungsi untuk folder tersebut
+            $totalSize += getFolderSize($filePath);
+        }
+    }
+
+    return $totalSize;
+}
+
+function penyimpanan(){
+    // Contoh penggunaan
+    $folderPath = getcwd();
+    $sizeInBytes = getFolderSize($folderPath);
+    
+    // Ubah ukuran ke dalam KB, MB, GB, dll.
+    $sizeInKB = intval($sizeInBytes / 1024);
+    $sizeInMB = intval($sizeInKB / 1024);
+    $sizeInGB = intval($sizeInMB / 1024);
+    
+    
+    // Menghitung selisih
+    $selisih = 5120 - $sizeInMB;
+    
+    // Menghitung persentase
+    $persen = ($selisih / 5120) * 100;
+    $persen =100 - $persen;
+    
+    return  $hasil= array(
+        'persen' => $persen,
+        'terpakai' => $sizeInMB,
+        'bebas' => $selisih,
+        'total' => 5120
+    ); ;
+}
 
 
 

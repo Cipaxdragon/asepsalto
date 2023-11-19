@@ -32,7 +32,7 @@
 <!-- Hero Image Section -->
 <div class="hero-image">
    <div class="container">
-      <h1 class="hero-title">Welcome Coy</h1>
+      <h1 class="hero-title">Welcome Coy </h1>
       <p> Selamat datang di website asal asalan hanya untuk latihan php native aing dan kebutuhan kuliah <br> Silahkan Input text online  jika ingin transer text antar device tanpa buka WA modal buka web ini saja</p>
       <div class="custom-form">
          <?php if (janganspam('sambarang')): ?>
@@ -53,13 +53,11 @@
       </div>
    </div>
 </div>
-<br>
-<br>
-<br>
+
 <hr>
 
 <!-- List Section -->
-<div id="list" class="container list-text">
+<div id="list" class="container list-text my-5">
    <h2 class="list-heading d-flex justify-content-center">Daftar Text ka</h2>
    <form action="#list" method="get" class="mb-3">
       <div class="input-group">
@@ -97,9 +95,9 @@
       <!-- ... -->
    </ul>
 </div>
-
+<hr>
 <!-- List Section -->
-<div id="aplikasi" class="container list-text ">
+<div id="aplikasi" class="container list-text my-5">
    <h2 class="list-heading d-flex justify-content-center">Daftar File Andalan</h2>
    <ul class="list-group">
       <?php include_once "format_laporan.php"?>
@@ -111,20 +109,20 @@
       <?php endforeach?>
    </ul>
 </div>
-
+<hr>
 <?php include_once "aplikasi.php"?>
-<div class="container mt-5">
+<div class="container my-5">
     <h2 class="list-heading d-flex justify-content-center">Daftar Aplikasi Andalan</h2>
 
     <div class="row justify-content-center">
         <?php foreach ($aplikasi_links as $aplikasi) : ?>
-            <div class="col-md-4 col-sm-6 mb-4 rounded">
+            <div class="col-md-4 col-sm-6 mb-4 rounded ">
                 <div class="card text-center">
                     <div class="card-body">
-                        <img src="<?= $aplikasi['icon']; ?>" class="img-fluid mb-3 p-3" alt="<?php echo $aplikasi['nama_aplikasi']; ?>">
+                        <img src="<?= $aplikasi['icon']; ?>" class="app_gambar img-fluid mb-3 p-3" alt="<?php echo $aplikasi['nama_aplikasi']; ?>">
                         <h5 class="card-title"><?= $aplikasi['nama_aplikasi']; ?></h5>
                         <p class="card-text"><?=  $aplikasi['deskripsi']; ?></p>
-                        <a href="<?= $aplikasi['link']; ?>" class="btn btn-primary" target="_blank"><i class="fas fa-download"></i> Download</a>
+                        <a href="<?= $aplikasi['link']; ?>" class="btn btn-primary" target="_blank"><i class="fas fa-download"></i> Donglo</a>
                     </div>
                 </div>
             </div>
@@ -132,14 +130,18 @@
     </div>
 </div>
 
+<hr>
 <?php include_once "upload_gambar.php"?>
-
-<div class="container mt-5 border p-3 d-flex justify-content-center align-items-center flex-column">
-   <h3>Daftar Format Laporan </h3>
+<hr>
+<?php include_once "penyimpanan.php"?>
+<hr>
+<div class="container mt-5 border p-3 d-flex justify-content-center align-items-center flex-column my-5">
+   <h3>Roster </h3>
    <h5>Coming Soon</h5>
 </div>
+<hr>
 </div>
-<div id="kritik" class="container mt-5">
+<div id="kritik" class="container my-5">
    <div class="row">
       <div class="col-md-6">
          <h2>Ini Website To</h2>
@@ -164,10 +166,7 @@
       </div>
    </div>
 </div>
-<br>
-<br>
-<br>
-<br>
+
 <?php 
    include_once "footer.php"
    ?>

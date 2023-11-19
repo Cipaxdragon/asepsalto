@@ -12,20 +12,20 @@
   }
 </style>
 
-<div id="up_gambar" class="container-fluid mt-5">
+<div id="up_gambar" class="container-fluid my-5 ">
   <h2 class="d-flex justify-content-center m-5"> T4 Gambar</h2>
   <div class="row">
     <div class="col-md-6 offset-md-3">
       <?php if(isset($_GET['u'])) :?>
       <?php if($_GET['u'] == 1) :?>
-        <div class="alert alert-success" role="alert"> Gambar Berhasil Di Upload </div>
+        <div class="alert alert-success" role="alert"> Gambar Berhasil Di Upload  buka <a href="gambar.php">Daftar Gambar</a> untuk melihat hasil upload</div>
         <?php else : ?>
           <div class="alert alert-danger" role="alert"> gagal </div>
         <?php endif ?>
       <?php endif ?>
       
       <form id="upload-form" method="post" enctype="multipart/form-data">
-        <div id="drop-area" class="text-muted">
+        <div id="drop-area" class="text-muted >
           <h3 class="mb-4">Drag & Drop Gambar</h3>
           <p>Atau klik di sini untuk memilih gambar</p>
           <label for="file-input" class="btn btn-secondary">Pilih File</label>
