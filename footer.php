@@ -8,6 +8,7 @@
             <li><a href="#list">List</a></li>
             <li><a href="#kritik">Kritik</a></li>
             <li><a href="kritik.php">Daftar Kritik</a></li>
+            <li><a href="gambar.php">Daftar gambar</a></li>
             <li><a href="https://drive.google.com/drive/u/1/folders/1KYIIWXLfMhZVOo1TfdR4DsorSGipS9mw">Tempat Rahasia</a></li>
             <!-- Add more menu links as needed -->
           </ul>

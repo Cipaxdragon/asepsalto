@@ -15,7 +15,11 @@
      header("Location: index.php?#kritik");
      exit;
    }
-   
+   if(isset($_FILES['gambar'])){
+      if(tambah_gambar() == 1){
+         header("Location: index.php?u=1#up_gambar");
+      }
+    }
    if(isset($_POST['submit'])){
      tambah($_POST);
      header("Location: index.php?#list");
@@ -128,6 +132,7 @@
     </div>
 </div>
 
+<?php include_once "upload_gambar.php"?>
 
 <div class="container mt-5 border p-3 d-flex justify-content-center align-items-center flex-column">
    <h3>Daftar Format Laporan </h3>
@@ -150,7 +155,7 @@
             <div class="form-group">
                <textarea class="form-control" id="kritik" name="kritik" rows="4" placeholder="Minta Saran ta fitur apa bagus dan Kritik ta siapa tau bagus klo ada juga bug mohon tulis hehe supaya bisa ku solve anjay "></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Kirim</button>
+            <button type="submit " class="btn btn-primary w-100 justify-content-center">Kirim</button>
             <?php else: ?>
             <div class="alert alert-info" role="alert" id="countdown_kritik">Jangan Spam Cuy </div>
             <?php include_once "countdown_kritik.php" ?>
