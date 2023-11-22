@@ -84,10 +84,14 @@
       <div class="alert alert-success">Data  Berhasil Di tambahkan cok</div>
       <?php endif?>
       <?php foreach ($hasil as $row) :?>
-      <li class="list-group-item list-group-item-action"><?php echo $row["teks"]?>
-         <span class="float-right small-text text-muted"><?php echo $row["user"] . ' - ' . waktu_konversi($row["waktu"]); ?></span>
-      </li>
-      <?php  endforeach?>
+         <li  class="list-group-item list-group-item-action">
+            <div class="copy-text">
+               <?php echo $row["teks"]?>
+            </div>
+            <span class="float-right small-text text-muted"><?php echo $row["user"] . ' - ' . waktu_konversi($row["waktu"]); ?></span>
+         </li>
+         <?php  endforeach?>
+         <?php include_once "salin.php"?>
    </ul>
    <!-- Pagination -->
    <ul class="pagination justify-content-center mt-2">
@@ -112,17 +116,17 @@
 <hr>
 <?php include_once "aplikasi.php"?>
 <div class="container my-5">
-    <h2 class="list-heading d-flex justify-content-center">Daftar Aplikasi Andalan</h2>
+    <h2 class="list-heading d-flex justify-content-center my-5">Daftar Aplikasi Andalan</h2>
 
     <div class="row justify-content-center">
         <?php foreach ($aplikasi_links as $aplikasi) : ?>
             <div class="col-md-4 col-sm-6 mb-4 rounded ">
                 <div class="card text-center">
-                    <div class="card-body">
-                        <img src="<?= $aplikasi['icon']; ?>" class="app_gambar img-fluid mb-3 p-3" alt="<?php echo $aplikasi['nama_aplikasi']; ?>">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-between" style="height: 25rem;">
+                        <img src="<?= $aplikasi['icon']; ?>" class="app_gambar img-fluid mb-3 p-3 w-50" alt="<?php echo $aplikasi['nama_aplikasi']; ?>">
                         <h5 class="card-title"><?= $aplikasi['nama_aplikasi']; ?></h5>
                         <p class="card-text"><?=  $aplikasi['deskripsi']; ?></p>
-                        <a href="<?= $aplikasi['link']; ?>" class="btn btn-primary" target="_blank"><i class="fas fa-download"></i> Donglo</a>
+                        <a href="<?= $aplikasi['link']; ?>" class="btn btn-primary" target="_blank"><i class="fas fa-download"></i> Donglod</a>
                     </div>
                 </div>
             </div>
@@ -134,6 +138,9 @@
 <?php include_once "upload_gambar.php"?>
 <hr>
 <?php include_once "penyimpanan.php"?>
+<hr>
+<?php include_once "jadwal_c.php"?>
+
 <hr>
 <div class="container mt-5 border p-3 d-flex justify-content-center align-items-center flex-column my-5">
    <h3>Roster </h3>

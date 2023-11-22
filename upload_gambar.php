@@ -12,7 +12,7 @@
   }
 </style>
 
-<div id="up_gambar" class="container-fluid my-5 ">
+<div id="up_gambar" class="container-fluid my-5">
   <h2 class="d-flex justify-content-center m-5"> T4 Gambar</h2>
   <div class="row">
     <div class="col-md-6 offset-md-3">

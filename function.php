@@ -28,7 +28,14 @@ function tambah($data) {
 
 	return mysqli_affected_rows($conn);
 }
+function anti_nol($n){
 
+    if($n-1){
+        return $n+1;
+    }
+    return$n;
+
+}
 
 function tambah_gambar() {
 	global $conn;

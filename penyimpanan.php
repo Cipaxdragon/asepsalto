@@ -14,7 +14,7 @@
     <div class="progress-container ">
       <div class="progress">
         <div class="progress-bar" role="progressbar" style="width: <?= $penyimpanan['persen']+10?>%;" aria-valuenow="<?= $penyimpanan['persen']?>" aria-valuemin="0" aria-valuemax="100">
-          <?= $penyimpanan['persen']?>%
+          <?= $penyimpanan['persen']?>
         </div>
     </div>
     <div class="d-flex justify-content-between mt-3">
